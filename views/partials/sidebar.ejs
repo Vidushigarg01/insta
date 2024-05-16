@@ -1,0 +1,17 @@
+<!-- Hamburger Menu Button -->
+<button @click="open = !open" class="lg:hidden text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800" aria-label="Open sidebar">
+  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+    <path x-show="!open" fill-rule="evenodd" clip-rule="evenodd" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
+    <path x-show="open" fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+  </svg>
+</button>
+
+<!-- Sidebar (Mobile) -->
+<div x-show="open" class="fixed inset-0 z-30 flex justify-end bg-black bg-opacity-25">
+  <div class="flex flex-col w-56 bg-white">
+    <button @click="open = open" class="py-2 px-4 hover:bg-gray-100 focus:outline-none">Close</button>
+    <a href="#" class="block py-2 px-4 hover:bg-gray-100">Settings</a>
+    <a href="#" class="block py-2 px-4 hover:bg-gray-100">Switch Profile</a>
+    <a href="#" class="block py-2 px-4 hover:bg-gray-100">Logout</a>
+  </div>
+</div>
